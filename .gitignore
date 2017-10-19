@@ -1,0 +1,6 @@
+bazel-bazel_ios_test
+bazel-bin
+bazel-genfiles
+bazel-out
+bazel-testlogs
+bazel_ios_test.zip
