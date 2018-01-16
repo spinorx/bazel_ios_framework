@@ -26,8 +26,11 @@ objc_library(
 
 ios_static_framework(
   name = "ios_s_fx",
-  bundle_id = "com.spinorX.ios_s_fx",
+  bundle_id = "com.spinorX.iossfx",
   minimum_os_version = "9.0",
+  hdrs = [
+    "objcpp.h",
+  ],
   deps = [
     ":objc_lib",
   ],
@@ -35,7 +38,7 @@ ios_static_framework(
 
 ios_framework(
   name = "ios_fx",
-  bundle_id = "com.spinorX.ios_fx",
+  bundle_id = "com.spinorX.iosfx",
   minimum_os_version = "9.0",
   families = [
     "iphone",
@@ -44,6 +47,9 @@ ios_framework(
   infoplists = [
     "Info-fx.plist",
   ],
+  hdrs = [
+    "objcpp.h",
+  ],
   deps = [
     ":objc_lib",
   ],
@@ -51,7 +57,7 @@ ios_framework(
 
 ios_application(
   name = "ios_app",
-  bundle_id = "com.spinorX.ios_app",
+  bundle_id = "com.spinorX.iosapp",
   minimum_os_version = "9.0",
   families = [
     "iphone",
